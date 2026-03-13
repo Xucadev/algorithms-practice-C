@@ -25,22 +25,21 @@ int main()
         afp_aplicable = (sueldo * afp);
         sueldo_final = (sueldo - afp_aplicable);
     }
-    if ((sueldo >= 30001) && (sueldo <= 40000))
+    else if ((sueldo >= 30001) && (sueldo <= 40000))
     {
         afp_aplicable = (sueldo * afp);
-        sueldo_final = (sueldo_final * 0.5);
+        sueldo_final = (sueldo - afp_aplicable) * 0.5;
     }
-    if ((sueldo >= 40001) && (sueldo <= 50000 ))
+    else if ((sueldo >= 40001) && (sueldo <= 50000))
     {
         afp_aplicable = (sueldo * afp);
-        sueldo_final = (sueldo_final * 0.5);
+        sueldo_final = (sueldo - afp_aplicable) * 0.5;
     }
     else
     {
         sueldo_final = sueldo;
     }
 
-
-    printf("Su sueldo final es de: %f\n", sueldo_final);
+    printf("Su sueldo final es de: %i\n", sueldo_final);
     return 0;
 }
